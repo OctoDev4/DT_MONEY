@@ -5,8 +5,9 @@ import { ArrowCircleDown, ArrowCircleUp, X } from "phosphor-react"; // Importa o
 import * as z from "zod"; // Importa todas as funcionalidades do pacote zod
 import { Controller, useForm } from "react-hook-form"; // Importa o Controller e o useForm do pacote react-hook-form
 import { zodResolver } from "@hookform/resolvers/zod"; // Importa o zodResolver do pacote @hookform/resolvers/zod
-import { useContext } from "react"; // Importa o hook useContext do React
+
 import { TransactionsContext } from "../../contexts/TransactionsContext"; // Importa o contexto TransactionsContext
+import { useContextSelector } from "use-context-selector";
 
 // Define o schema para validação dos campos do formulário
 const newTransactionFormSchema = z.object({
@@ -22,7 +23,9 @@ type NewTransactionFormInput = z.infer<typeof newTransactionFormSchema>;
 // Componente responsável por renderizar o modal para criar uma nova transação
 export function NewTransactionModal() {
   // Utilização do hook useContext para acessar o contexto TransactionsContext
-  const { createTransaction } = useContext(TransactionsContext);
+  const createTransaction  = useContextSelector(TransactionsContext,(context)=>{
+    return context.createTransaction
+  });
 
   // Utilização do hook useForm para gerenciar o estado do formulário
   const { 
