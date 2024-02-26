@@ -1,0 +1,36 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Desenvolvimento de Site",
+      "type": "income",
+      "category": "venda",
+      "price": 14000,
+      "createdAt": "2024-02-23T21:17:29.358Z"
+    },
+    {
+      "id": 2,
+      "description": "Rinha de Galo",
+      "type": "outcome",
+      "category": "Diversão",
+      "price": 200,
+      "createdAt": "2024-02-23T21:17:29.358Z"
+    },
+    {
+      "description": "amor",
+      "type": "income",
+      "category": "jogos",
+      "price": 6,
+      "createdAt": "2024-02-25T22:20:51.686Z",
+      "id": 3
+    },
+    {
+      "description": "123",
+      "type": "outcome",
+      "category": "alimento",
+      "price": 123,
+      "createdAt": "2024-02-25T22:40:20.275Z",
+      "id": 4
+    }
+  ]
+}
